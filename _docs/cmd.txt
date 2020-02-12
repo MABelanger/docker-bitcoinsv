@@ -1,0 +1,22 @@
+https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes
+https://hub.docker.com/r/kylemanna/bitcoind
+
+docker build -t bitcoinsv .
+docker images -a | xargs docker rmi
+
+# https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes
+docker system prune
+docker system prune -a
+docker build -t bitcoinsv .
+
+docker run -v /Volumes/data/docker/image/docker-bitcoinsv/bitcoin --name bsv bitcoinsv
+docker run -v ~/bitcoin/c:/root/.bitcoin --name bsv bitcoinsv
+docker run -v $(pwd)/data:/root/.bitcoin  bitcoinsv
+
+
+
+https://hub.docker.com/r/bitcoinsv/bitcoin-sv/
+docker pull bitcoinsv/bitcoin-sv
+
+
+docker run -it bitcoinsv/bitcoin-sv /bin/bash

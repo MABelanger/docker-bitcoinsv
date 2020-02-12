@@ -1,5 +1,13 @@
 # Docker Bitcoin SV
 
+# Quick start
+```bash
+./clean.sh
+./build.sh
+./start.sh
+```
+
+# Other options
 Building the docker image, naming it 'bitcoinsv':
 
 ```bash
